@@ -1,0 +1,21 @@
+services:
+  cms_normalizers.node_normalizer:
+    class: Drupal\cms_normalizers\NodeEntityNormalizer
+    arguments: ['@rest.link_manager', '@entity.manager', '@module_handler']
+    tags:
+      - { name: normalizer, priority: 100 }
+  cms_normalizers.taxonomy_term_normalizer:
+    class: Drupal\cms_normalizers\TermEntityNormalizer
+    arguments: ['@rest.link_manager', '@entity.manager', '@module_handler']
+    tags:
+      - { name: normalizer, priority: 100 }
+  cms_normalizers.file_normalizer:
+    class: Drupal\cms_normalizers\FileEntityNormalizer
+    arguments: ['@rest.link_manager', '@entity.manager', '@module_handler']
+    tags:
+      - { name: normalizer, priority: 100 }
+  cms_normalizers.menu_link_content_normalizer:
+    class: Drupal\cms_normalizers\MenuLinkContentEntityNormalizer
+    arguments: ['@rest.link_manager', '@entity.manager', '@module_handler']
+    tags:
+      - { name: normalizer, priority: 100 }

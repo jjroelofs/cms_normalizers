@@ -1,0 +1,9 @@
+name: CMS Normalizers
+type: module
+description: Helper module to normailze default CMS content.
+package: Glazed Drupal CMS
+version: 8.x-1.0-dev
+core: 8.x
+dependencies:
+  - default_content
+  - better_normalizers
